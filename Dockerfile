@@ -8,6 +8,8 @@ LABEL description="This dockerfile \
 installs python and c modules needed \
 to run mkdocs with several extensions."
 
+VOLUME /content
+VOLUME /stage
 
 RUN apt-get clean
 RUN rm -r  /var/lib/apt/lists/*
@@ -40,4 +42,4 @@ RUN pip3 install --user \
         mkdocs-pdf-export-plugin
 
 #CMD tail -f /dev/null
-CMD python3 -m mkdocs build
+CMD cd /content && python3 -m mkdocs build

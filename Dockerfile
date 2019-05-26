@@ -40,6 +40,7 @@ RUN pip3 install --user \
         pygments \
         plantuml-markdown \
         mkdocs-pdf-export-plugin
+RUN touch /mkdocs_build
 
 #CMD tail -f /dev/null
 CMD cd /content && python3 -m mkdocs build

@@ -28,7 +28,7 @@ RUN apt-get --assume-yes install libcairo2  \
     libgdk-pixbuf2.0-0 \
     libffi-dev \
     shared-mime-info
-RUN pip3 install --user \
+RUN pip3 install \
         --trusted-host=pypi.org \
         --trusted-host=pypi.python.org \
         --trusted-host=files.pythonhosted.org \

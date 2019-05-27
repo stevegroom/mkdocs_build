@@ -39,7 +39,8 @@ RUN pip3 install \
         pymdown-extensions \
         pygments \
         plantuml-markdown \
-        mkdocs-pdf-export-plugin
+        mkdocs-pdf-export-plugin \
+        WeasyPrint
 RUN touch /mkdocs_build
 
 #CMD tail -f /dev/null

@@ -157,9 +157,18 @@ RUN pip3 install \
         mkdocs-mermaid-plugin \
         pymdown-extensions \
         pygments \
-        plantuml-markdown \
+        plantuml_markdown==3.1.0 \
         mkdocs-pdf-export-plugin
 RUN touch /mkdocs_build
 #CMD tail -f /dev/null
 CMD cd /content && python3 -m mkdocs build
 ```
+
+## Changelog
+
+31.05.2019 Plantuml_markdown.  
+Dockerfile updated to a specific version for this module.
+```plantuml_markdown==3.1.0```  
+mkdocs.yml to to ```- plantuml_markdown:```.
+
+Plantuml extension was updated 29th May with a module name change that is not 100% rolled out. Sticking to previous version until this works again <https://pypi.org/project/plantuml-markdown/3.1.0/>

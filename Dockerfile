@@ -38,10 +38,13 @@ RUN pip3 install \
         mkdocs-mermaid-plugin \
         pymdown-extensions \
         pygments \
-        plantuml-markdown \
+        plantuml_markdown==3.1.0 \
         mkdocs-pdf-export-plugin \
         WeasyPrint
 RUN touch /mkdocs_build
 
+WORKDIR /content
 #CMD tail -f /dev/null
-CMD cd /content && python3 -m mkdocs build
+#ENTRYPOINT [ "exec", "python3", "-m"]
+CMD cd /content && python3 -m mkdocs build 
+ 

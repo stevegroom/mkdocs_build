@@ -1,0 +1,54 @@
+site_name: Mkdocs Build Test
+site_url: 'https://localhost'
+repo_url: 'https://github.com/stevegroom/mkdocs_build.git'
+repo_name: '.git repo'
+edit_uri: '/mkdocs_build/blob/master/'
+docs_dir: docs
+site_dir: ../stage/
+site_description: 'Test mkdocs'
+copyright: 'Steve Groom'
+dev_addr: '127.0.0.1:8000'
+use_directory_urls: true
+plugins:
+  - search
+  - pdf-export:
+      combined: true
+      media_type: print
+      verbose: false
+      combined_output_path: ./book.pdf
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: true
+  - plantuml_markdown:
+      server: http://www.plantuml.com/plantuml
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - toc:
+      permalink: true
+extra_javascript:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js  
+theme:
+    name: 'material'
+    palette:
+      primary: 'blue grey'
+      accent: 'blue'
+    logo: assets/Nest_white_TransparentBackground.png
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+    shortcuts:
+        help: 191    # ?
+        next: 78     # n
+        previous: 80 # p
+        search: 83   # s
+nav:
+  - Home: 
+    - Home: ./README.md
+    - Admonition: admonition.md
+    - Mermaid: mermaid.md
+    - Plant UML: plantuml.md

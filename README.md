@@ -88,8 +88,7 @@ RUN apt-get --assume-yes install libcairo2  \
     shared-mime-info
 ```
 
-These are the binaries that are needed to support mkdocs. Python is already installed in the ```Ubuntu``` image, but is kept 
-here for completeness.
+These are the binaries that are needed to support mkdocs. Python is already installed in the ```Ubuntu``` image, but is kept here for completeness.
 
 ```docker
 RUN pip3 install \

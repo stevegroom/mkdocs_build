@@ -43,6 +43,8 @@ RUN pip3 install \
         WeasyPrint
 RUN touch /mkdocs_build
 
+EXPOSE 8000
+
 WORKDIR /content
 #CMD tail -f /dev/null
 #ENTRYPOINT [ "exec", "python3", "-m"]

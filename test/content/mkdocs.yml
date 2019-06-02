@@ -7,7 +7,7 @@ docs_dir: docs
 site_dir: ../stage/
 site_description: 'Test mkdocs'
 copyright: 'Steve Groom'
-dev_addr: '127.0.0.1:8000'
+dev_addr: '0.0.0.0:8000'
 use_directory_urls: true
 plugins:
   - search

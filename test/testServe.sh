@@ -1,13 +1,12 @@
 #!/bin/bash
-
 set -x
 
-cmd='/bin/sh -c cd /content && python3 -m mkdocs serve'
+cmd="cd /content && python3 -m mkdocs serve"
 #cmd='/bin/bash'
 
-docker run -d \
+docker run -it --rm \
   --mount "type=bind,src=`pwd`/test/content,dst=/content" \
   --mount "type=bind,src=`pwd`/stage,dst=/stage" \
-  -p 801:80 \
-  mkdocs_build $cmd
+  --publish 8888:8000 \
+  mkdocs_build /bin/bash -c "$cmd"
 #  stevegroom/mkdocs_build $cmd

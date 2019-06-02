@@ -15,9 +15,9 @@ More info here: <http://plantuml.com/faq>.
 
 ## Examples of PlantUML
 
-This UML code:
+Create this uml chart
 
-```text
+```plantuml
 skinparam componentStyle uml2
 
 [User] - https
@@ -45,29 +45,30 @@ XSUAA -right-> [IDP] : SAML
 
 Renders to this: when put between ```` ```plantuml```` code fences
 
-```plantuml
-skinparam componentStyle uml2
+```text
+    ```plantuml
+    skinparam componentStyle uml2
 
-[User] - https
+    [User] - https
 
 
-cloud "Cloud Foundry" {
+    cloud "Cloud Foundry" {
 
-    package "node.js apps" {
-      [Frontend] - http
-      http - [Backend]  
+        package "node.js apps" {
+          [Frontend] - http
+          http - [Backend]  
+        }
+
+        package "CF Services" {
+          [XSUAA]  
+        }
+
+    [Frontend] -d-> [XSUAA] : JWT
+    [Backend] <-u- [XSUAA] : JWT
     }
 
-    package "CF Services" {
-      [XSUAA]  
-    }
-
-[Frontend] -d-> [XSUAA] : JWT
-[Backend] <-u- [XSUAA] : JWT
-}
-
-component "IDP"
-https -right-> [Frontend]
-XSUAA -right-> [IDP] : SAML
-
+    component "IDP"
+    https -right-> [Frontend]
+    XSUAA -right-> [IDP] : SAML
+    ```
 ```

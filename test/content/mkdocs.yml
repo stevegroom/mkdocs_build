@@ -22,7 +22,7 @@ markdown_extensions:
       linenums: true
   - plantuml_markdown:
       server: http://www.plantuml.com/plantuml
-  - pymdownx.superfences:
+  - pymdownx.superfences: 
       custom_fences:
         - name: mermaid
           class: mermaid
@@ -30,13 +30,12 @@ markdown_extensions:
   - toc:
       permalink: true
 extra_javascript:
-  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js  
+  - https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js  
 theme:
     name: 'material'
     palette:
       primary: 'blue grey'
       accent: 'blue'
-    logo: assets/Nest_white_TransparentBackground.png
     highlightjs: true
     hljs_languages:
         - yaml

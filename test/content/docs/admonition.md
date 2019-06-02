@@ -4,15 +4,22 @@ The admonition markdown extension offers simple, highly stylized boxes for inlin
 
 ## Syntax
 
-Start the line with three explication marks and indent all subsequent paragraphs with four spaces.
+Start the line with three explication marks and indent all subsequent paragraphs with four spaces. To replace the standard name, add a text after it enclosed in double-quotes.
 
 ```text
-!!! Alert
+!!! Alert "Look out!"
+    This is a quick way to highlight key texts in a document.
+```
+
+renders:
+
+!!! Alert "Look out!"
     This is a quick way to highlight key texts in a document.
 
+```text
 syntax:
 
-!!! keyword [optional title]
+!!! keyword ["optional title"]
     Indented content
 
     over several lines
@@ -58,7 +65,8 @@ Set [optional keyword] = "" to suppress the header bar.
 !!! Question
     Did you understand this section?
 
-!!! Danger Don't try this at home!
+!!! danger "Do not try this at home"
+    Really don't!
 
 !!! Bug
     There is a known bug
@@ -66,8 +74,7 @@ Set [optional keyword] = "" to suppress the header bar.
 !!! Example
     You can put an example here too
 
-!!! Quote
-    Eating our own dog food  
+!!! Quote "Eating our own dog food" 
     *1988 Paul Maritz Microsoft*
 
 !!! note ""

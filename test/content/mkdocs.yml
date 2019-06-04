@@ -12,9 +12,9 @@ use_directory_urls: true
 plugins:
   - search
   - pdf-export:
-      combined: true
+      combined: false
       media_type: print
-      verbose: false
+      verbose: true
       combined_output_path: ./book.pdf
 markdown_extensions:
   - admonition

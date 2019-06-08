@@ -32,6 +32,7 @@ RUN pip3 install \
         --trusted-host=pypi.org \
         --trusted-host=pypi.python.org \
         --trusted-host=files.pythonhosted.org \
+        markdown \
         setuptools \
         mkdocs \
         mkdocs-material \

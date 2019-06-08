@@ -15,3 +15,7 @@ This authoring and publishing system relies on well established open source apps
 ### Markdown
 
 Markdown is the defacto standard for documenting open source projects, and a popular extension of this - GFM (Github Flavored Markdown) is what this app supports.
+
+### Include
+
+--8<-- "extraFile.md"

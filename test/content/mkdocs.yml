@@ -17,6 +17,9 @@ plugins:
       verbose: true
       combined_output_path: ./book.pdf
 markdown_extensions:
+  - pymdownx.snippets:
+      base_path: docs
+      check_paths: true
   - admonition
   - codehilite:
       linenums: true

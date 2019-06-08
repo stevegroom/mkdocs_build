@@ -172,7 +172,8 @@ mkdocs.yml to to ```- plantuml_markdown:```.
 
 Plantuml extension was updated 29th May with a module name change that is not 100% rolled out. Sticking to previous version until this works again <https://pypi.org/project/plantuml-markdown/3.1.0/>
 
-### 02.06.2019 Opened issue  
+### 02.06.2019 Opened issue
+
 <https://github.com/zhaoterryy/mkdocs-pdf-export-plugin/issues/54>
 
 ### 08.06.2019 Added support for snippets
